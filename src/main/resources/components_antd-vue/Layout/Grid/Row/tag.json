@@ -1,0 +1,9 @@
+{
+  "tag": "a-row",
+  "prop": {
+    "gutter": [10],
+    "type": ["flex"],
+    "justify": ["start", "end", "center", "space-around", "space-between"],
+    "align": ["top", "middle", "bottom"]
+  }
+}

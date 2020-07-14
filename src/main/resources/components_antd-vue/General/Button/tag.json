@@ -1,0 +1,14 @@
+{
+  "tag": "a-button",
+  "prop": {
+    "disabled": ["true", "false"],
+    "ghost": ["true", "false"],
+    "html-type": ["button", "submit", "reset"],
+    "icon": ["search", "plus", "edit", "delete"],
+    "loading": ["true", "false"],
+    "shape": ["circle", "round"],
+    "size": ["large ", "small", "default"],
+    "type": ["primary", "default", "dashed", "danger", "link"],
+    "block": ["true", "false"]
+  }
+}

@@ -1,0 +1,50 @@
+<idea-plugin>
+    <id>com.github.plugin.antdv</id>
+    <name>antd-vue</name>
+    <version>1.0</version>
+    <vendor url="https://github.com/sinton/antd-vue-intellij-plugin">antd-vue-intellij-plugin</vendor>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <description><![CDATA[
+      support for ant design for vue framework,
+      before use this plugin, you must install plugin <a href="https://github.com/JetBrains/intellij-plugins/tree/master/vuejs">vuejs</a>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      1. optimize, <br/>
+      2. add tag special attribute and auto tip.
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+    <depends>JavaScript</depends>
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <fileTypeFactory implementation="com.github.VueFileTypeFactory" />
+        <!--<lang.parserDefinition language="element" implementationClass="com.elementent.language.elementParserDefinition"/>-->
+
+        <!-- 代码块提示 -->
+        <defaultLiveTemplatesProvider implementation="com.github.VueTemplatesProvider"/>
+
+        <!-- 标签文档提示 -->
+        <lang.documentationProvider language="HTML" implementationClass="com.github.document.DocumentProvider" order="first"/>
+
+        <!-- 标签自动完成、属性提示 -->
+        <xml.tagNameProvider implementation="com.github.xml.VueTagNameProvider"/>
+        <xml.elementDescriptorProvider implementation="com.github.xml.VueTagNameProvider" order="first"/>
+        <xml.attributeDescriptorsProvider implementation="com.github.xml.VueAttributesProvider" />
+
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
